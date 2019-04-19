@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'WeatherApp';
+  parentData:any;
+  public clickedEvent: string;
+  title = `Weather's Call`;
+  public message:string ='';
+    childEventClicked(event: string) {
+    this.clickedEvent = event;
+  }
 }

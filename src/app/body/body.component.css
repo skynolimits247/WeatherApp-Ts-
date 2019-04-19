@@ -1,0 +1,25 @@
+ #jumbo{
+   text-align: center;
+    margin: 0 auto;
+    margin-bottom: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+} 
+#col1{
+    background: #343a40;
+     text-align: left;
+    color:white;
+}
+
+#tempDisp{
+    text-align: center;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color:white;
+}

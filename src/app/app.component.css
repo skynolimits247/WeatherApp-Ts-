@@ -1,0 +1,10 @@
+.body{
+    text: white;
+    background: url("/assets/bckimg.jpg");
+    height: 100%; 
+    border: 2px solid black;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+

@@ -1,0 +1,22 @@
+ #nanocontainer{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.card{
+   color : #343a40;
+    background:transparent;
+     color:white;
+}
+h2{
+    text-align: center;
+     color:white;
+}
+    table{
+        background:white;
+        color : #343a40;
+    }
