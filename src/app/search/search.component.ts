@@ -15,5 +15,6 @@ export class SearchComponent implements OnInit {
 
   GetLocation(data){
      this.service.sendData(data)
+     this.data=''
   }
 }

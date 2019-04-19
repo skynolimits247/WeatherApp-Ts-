@@ -1,4 +1,4 @@
-   <div align="center"><h2> {{data.city.name| titlecase}}'s weather </h2></div>
+
   <div class="well col-md-9" id="jumbo"> 
    
     <div class="row" id="col1">  
@@ -6,7 +6,8 @@
         {{data.list[0].weather[0].description| titlecase}} <br>
       <img src="./assets/WeatherIcons/{{data.list[0].weather[0].description}}.png" alt="image logo" width="150" height="150">
       </div>  
-          <div class="col col-md-5 col-sm-3" id="tempDisp"><h1>{{data.list[0].main.temp_max}}&#176;</h1><br>
+          <div class="col col-md-5 col-sm-3" id="tempDisp"><h1>{{data.city.name| titlecase}}, {{data.city.country}}
+            <br>{{data.list[0].main.temp_max}}&#176;</h1><br>
       </div>  
  
           <div class="col col-md-6 col-sm-6">
