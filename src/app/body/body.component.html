@@ -1,18 +1,23 @@
 
-  <div class="well col-md-9" id="jumbo"> 
+ <div *ngIf="!visibility; else elseBlock">Text to show</div>
+
+  <ng-template #elseBlock>
+      <div class="well col-md-9" id="jumbo"> 
    
     <div class="row" id="col1">  
       <div class="col col-md-6 col-sm-6" id="col2"><strong>{{data.list[5].dt_txt | date :'fullDate'}}</strong><br>
-        {{data.list[0].weather[0].description| titlecase}} <br>
+        {{data.list[5].weather[0].description| titlecase}} <br>
       <img src="./assets/WeatherIcons/{{data.list[0].weather[0].description}}.png" alt="image logo" width="150" height="150">
       </div>  
           <div class="col col-md-5 col-sm-3" id="tempDisp"><h1>{{data.city.name| titlecase}}, {{data.city.country}}
-            <br>{{data.list[0].main.temp_max}}&#176;</h1><br>
+            <br>{{data.list[5].main.temp_max}}&#176;</h1><br>
       </div>  
  
           <div class="col col-md-6 col-sm-6">
-          <strong>Precipitation : </strong>{{data.list[0].main.humidity}}%<br>
-          <strong>Humidity : </strong>{{data.list[0].main.humidity}}%<br>
-          <strong>Wind : </strong>{{data.list[0].wind.speed}} mph <br>
+          <strong>Precipitation : </strong>{{data.list[5].main.humidity}}%<br>
+          <strong>Humidity : </strong>{{data.list[5].main.humidity}}%<br>
+          <strong>Wind : </strong>{{data.list[5].wind.speed}} mph <br>
           </div>   
   </div>
+      </div>
+  </ng-template> 

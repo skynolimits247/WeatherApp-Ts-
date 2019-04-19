@@ -9,15 +9,16 @@ import{IWeatherData} from '../IWeatherdata';
 })
 export class BodyComponent implements OnInit {
   public data:IWeatherData;
-  public visible:boolean=true;
+   visibility:boolean=false;
   constructor(private service: SharedataService) { 
   }
   ngOnInit() {
+                this.visibility=true
                   this.service.$search.subscribe((res) =>{
-                    this.data=res;
-  },error=> { this.visible=false;
-                      console.log("error")
-                    alert("Please enter a valid city name")})
+                  this.data=res;
+                  console.clear()
+  },error=> {       this.visibility=false;
+                    alert("Please enter a valid city name!!")})
   }
 
 }

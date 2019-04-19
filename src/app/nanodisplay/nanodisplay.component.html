@@ -1,6 +1,6 @@
 
 <div>
-  <h2> {{data.city.name| titlecase}}'s weather Forecast </h2>
+  <h1> {{data.city.name| titlecase}}'s weather Forecast </h1>
   <div class="row card" id="nanocontainer">
     <div *ngFor="let datas of data.list; let i = index; "> 
           <div *ngIf="i % 8 === 0 && i !== 0">
@@ -8,7 +8,7 @@
                  <div class=" col-md-9 col-sm-9" align="center"> 
                       <table class="table-striped"> 
                         <tr>
-                          <td class="col-md-2"> {{datas.dt_txt | date :'EEEE'}} </td>
+                          <td class="col-md-2"> <b>{{datas.dt_txt | date :'EEEE'}} </b></td>
                           <td class="col-md-3"> <img src="./assets/WeatherIcons/{{datas.weather[0].description}}.png" alt="" width="100"> </td> 
                           <td class="col-md-1"> <strong>{{datas.main.temp_max}}&#176;</strong> <br> {{datas.main.temp_min}}&#176;</td>
                           <td class="col-md-2">  {{datas.weather[0].description| titlecase}} </td>

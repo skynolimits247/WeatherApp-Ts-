@@ -18,7 +18,7 @@ export class NanodisplayComponent implements OnInit {
                       this.data=res;
   },error=> { this.visible=false;
                       console.log("error")
-                    alert("Please enter a valid city name")})
+                    alert("Please enter a valid city name...!!!")})
   }
 
 }

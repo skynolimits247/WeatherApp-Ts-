@@ -4,6 +4,6 @@ body{
     background: url("/assets/bckimg.jpg");
     height: 100%; 
     border: 2px solid black;
-    background-size: 156%;
+    background-size: 100%;
 }
 

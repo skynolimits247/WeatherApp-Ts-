@@ -26,7 +26,7 @@ export class SharedataService {
                       this.$search.emit(this.object)
                       },
                     error=>{
-                      alert("Enter a valid city name...!")
+                      alert("Enter a valid city name!")
                     });
      
      

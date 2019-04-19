@@ -5,9 +5,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  visibility:boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
-
+  toggle(){
+     this.visibility = !this.visibility
+  }
 }
