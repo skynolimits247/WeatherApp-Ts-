@@ -8,13 +8,13 @@ import{SharedataService} from './sharedata.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  constructor(private service: SharedataService) { }
-  data:string;
+  constructor(private service: SharedataService, ) { }
+  data:string="";
   ngOnInit() {
   }
 
   GetLocation(data){
-     this.service.sendData(data)
-     this.data=''
+    this.service.sendData(data)
+    this.data=data
   }
 }
