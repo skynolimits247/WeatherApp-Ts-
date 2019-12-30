@@ -1,21 +1,40 @@
 
-<div>
-  <h1> {{data.city.name| titlecase}}'s weather Forecast </h1>
+<div *ngIf="data !== null && data !== undefined">
+  <h1> {{data.city.name| titlecase}}'s weekely Forecast </h1>
   <div class="row card" id="nanocontainer">
-    <div *ngFor="let datas of data.list; let i = index; "> 
+    <div *ngFor="let datas of data.list; let i = index; ">
           <div *ngIf="i % 8 === 0 && i !== 0">
             <hr>
-                 <div class=" col-md-9 col-sm-9" align="center"> 
-                      <table class="table-striped"> 
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                         <img src="./assets/WeatherIcons/{{datas.weather[0].description}}.png" alt="" width="100">
+                      </div>
+                      <div class="col">
+                        <h5 class="card-title"><b>{{datas.dt_txt | date :'EEEE'}} </b></h5>
+                        <p class="card-text"><strong>{{datas.main.temp_max}}&#176;</strong> <br> {{datas.main.temp_min}}&#176;
+                          <br>
+                          {{datas.weather[0].description| titlecase}}
+                          <br>
+                          <strong>Humidity</strong><br> {{datas.main.humidity}}%
+                        </p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+                 <!-- <div class="col-sm-9" style="text-align:center;">
+                      <table class="table-responsive-sm">
                         <tr>
                           <td class="col-md-2"> <b>{{datas.dt_txt | date :'EEEE'}} </b></td>
-                          <td class="col-md-3"> <img src="./assets/WeatherIcons/{{datas.weather[0].description}}.png" alt="" width="100"> </td> 
+                          <td class="col-md-3"> <img src="./assets/WeatherIcons/{{datas.weather[0].description}}.png" alt="" width="100"> </td>
                           <td class="col-md-1"> <strong>{{datas.main.temp_max}}&#176;</strong> <br> {{datas.main.temp_min}}&#176;</td>
                           <td class="col-md-2">  {{datas.weather[0].description| titlecase}} </td>
                           <td class="col-md-1"> <strong>Humidity</strong><br> {{datas.main.humidity}}% </td>
                         </tr>
                       </table>
-                  </div>
+                  </div> -->
             </div>
       </div>
   </div>

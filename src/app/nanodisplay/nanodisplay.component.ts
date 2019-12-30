@@ -8,17 +8,20 @@ import{IWeatherData} from '../IWeatherdata';
   styleUrls: ['./nanodisplay.component.css']
 })
 export class NanodisplayComponent implements OnInit {
-  data:IWeatherData;
-  visible:boolean=true;
+  data: IWeatherData;
+  visible = true;
   constructor(private service: SharedataService) { }
 
   ngOnInit() {
                   this.service.$search.subscribe((res) =>{
-                    this.visible=true
-                      this.data=res;
-  },error=> { this.visible=false;
-                      console.log("error")
-                    alert("Please enter a valid city name...!!!")})
+                  this.visible = true;
+                  this.data = res;
+  },
+    error => {
+    this.visible = false;
+    console.log('error');
+    alert('Please enter a valid city name...!!!');
+  });
   }
 
 }
